@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+//personas = substitution cipher where each letter in the plaintext is shifted a certain number of positions down the alphabe
+class CaesarCipher {
+    private:
+        int shiftValue;
+    
+        
+};
+
+
+int main()
+{
+    //
+    class CaesarCipher {
+        int shiftValue;
+        
+    }
+    return 0;
+}
