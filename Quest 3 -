@@ -1,0 +1,101 @@
+******************************************************************************
+
+Welcome to GDB Online.
+  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
+  Code, Compile, Run and Debug online from anywhere in world.
+  
+Please ong do your parts cause this shit needs to be done in two days, so 
+everyone else can do their parts 
+
+*******************************************************************************/
+
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <string>
+
+using namespace std;
+
+// CaesarCipher class definition
+class CaesarCipher {
+  private:
+    int shiftValue; // Shift value for the cipher
+  protected:
+// Constructor to initialize shiftValue
+    CaesarCipher(int value) : shiftValue(value) {}// constructor to set the shift value
+  public:
+// Method to set the shift value
+    void setShiftValue(int value) {
+      if (value >= 1 && value <= 13) {
+      shiftValue = value;
+    }
+      else {
+    printf("Invalid shift value. Please enter a value between 1 and 13.\n");
+      }
+      }
+// Method to encode the message using Caesar cipher
+string encode(const string& message) {
+  string encodedMessage = message; // Copy the original message
+  for (size_t i = 0; i < message.length(); ++i) {
+  if (isalpha(message[i])) { // Check if the character is an alphabet
+    char base = islower(message[i]) ? 'a' : 'A'; // Determine base for lowercase or uppercase
+    encodedMessage[i] = (message[i] - base + shiftValue) % 26 + base; // Apply Caesar cipher
+}
+}
+return encodedMessage; // Return the encoded message
+}
+// Method to decode the message using Caesar cipher
+
+
+// Destructor
+~CaesarCipher() {
+// Destructor logic if needed
+}
+// Method to get the shift value
+int getShiftValue() const {
+  return shiftValue; // Return the shift value
+}
+// Method to get the encoded message
+string getEncodedMessage(const string& message) {
+  return encode(message); // Return the encoded message
+}
+// Method to get the decoded message
+
+// Method to get the original message
+
+
+
+
+
+
+};
+
+// Derived class for Rot13Cipher
+class Rot13Cipher : public CaesarCipher {
+
+};
+
+
+
+int main() 
+{
+
+return 0;
+}
+
+
+//test code using personal method
+//void ceasarCipher(char* plainText, int key);// function prototype 
+//
+//int main(void)
+//{
+//int key = 1;
+//char plainText[101];
+//
+//printf("Enter the text to be encrypted: ");
+//
+//fgets(plainText, sizeof(plainText), stdin);//gets input from user and stores it in plaintext
+//
+//printf("The ciphered text is : ");
+... (23 lines left)
